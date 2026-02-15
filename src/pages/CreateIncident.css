@@ -1,0 +1,90 @@
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-title {
+    font-weight: 700 !important;
+    color: #1e293b;
+    margin-bottom: 8px !important;
+}
+
+.form-subtitle {
+    color: #64748b;
+}
+
+.form-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.form-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+/* Custom Input Styling Overrides */
+.MuiOutlinedInput-root {
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    border-radius: 12px !important;
+}
+
+.MuiOutlinedInput-root:hover {
+    background-color: #f1f5f9;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+    /* Softer, larger focus ring */
+}
+
+.MuiOutlinedInput-input {
+    padding: 22px 26px !important;
+}
+
+.MuiInputLabel-root {
+    transform: translate(26px, 22px) scale(1);
+}
+
+.MuiInputLabel-shrink {
+    transform: translate(14px, -9px) scale(0.75);
+}
+
+.MuiOutlinedInput-multiline {
+    padding: 0 !important;
+}
+
+.MuiOutlinedInput-multiline .MuiOutlinedInput-input {
+    padding: 22px 26px !important;
+}
+
+.MuiSelect-select {
+    padding: 22px 26px !important;
+    display: flex;
+    align-items: center;
+}

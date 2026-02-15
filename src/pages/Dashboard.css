@@ -1,0 +1,56 @@
+/* Dashboard Styles */
+
+.severity-sev1 {
+    background-color: #fce8e6 !important;
+    color: #c9252d !important;
+    border: 1px solid #c9252d !important;
+}
+
+.severity-sev2 {
+    background-color: #fff0e0 !important;
+    color: #f15b2a !important;
+    border: 1px solid #f15b2a !important;
+}
+
+.severity-sev3 {
+    background-color: #fff9e6 !important;
+    color: #b38600 !important;
+    border: 1px solid #b38600 !important;
+}
+
+.severity-sev4 {
+    background-color: #e6f0ff !important;
+    color: #0052cc !important;
+    border: 1px solid #0052cc !important;
+}
+
+.severity-unknown,
+.severity-default {
+    background-color: #f4f5f7 !important;
+    color: #42526e !important;
+    border: 1px solid #dfe1e6 !important;
+}
+
+
+/* Status Chips */
+.status-chip-open {
+    background-color: #deebff !important;
+    color: #0747a6 !important;
+    font-weight: 700;
+}
+
+.status-chip-mitigated {
+    background-color: #fff0b3 !important;
+    color: #172b4d !important;
+    font-weight: 700;
+}
+
+.status-chip-resolved {
+    background-color: #e3fcef !important;
+    color: #006644 !important;
+    font-weight: 700;
+}
+
+/* Ensure chips in table look good */
+/* Ensure chips in table look good */
+/* Moved to index.css for global consistency */

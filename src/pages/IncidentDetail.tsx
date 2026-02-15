@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import {
     Typography, TextField, Button, MenuItem, Box, Alert,
@@ -17,7 +17,7 @@ import { getIncidentById, updateIncident, deleteIncident, getFilters } from '../
 import type { Incident, UpdateIncidentDto } from '../types';
 import './IncidentDetail.css';
 
-const IncidentDetail = () => {
+const IncidentDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);

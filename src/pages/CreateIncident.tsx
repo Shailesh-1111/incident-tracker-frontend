@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
     TextField, Button, MenuItem, Typography, Box, Alert,
@@ -13,7 +13,7 @@ import { createIncident, getFilters } from '../services/incidentService';
 import type { CreateIncidentDto } from '../types';
 import './IncidentDetail.css';
 
-const CreateIncident = () => {
+const CreateIncident: React.FC = () => {
     const navigate = useNavigate();
     const [services, setServices] = useState<string[]>([]);
     const [initLoading, setInitLoading] = useState(true);

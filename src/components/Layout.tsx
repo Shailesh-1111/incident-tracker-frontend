@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { ReactNode, FC } from 'react';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
 import {
     Box, IconButton, Typography, useMediaQuery, useTheme, Avatar
@@ -9,10 +10,10 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import './Layout.css';
 
 interface LayoutProps {
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const [mobileOpen, setMobileOpen] = useState(false);

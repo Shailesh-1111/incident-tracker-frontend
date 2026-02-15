@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     Typography, Button, Box, Chip,
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel,
@@ -18,7 +18,7 @@ import { getIncidents, getCounts, getFilters } from '../services/incidentService
 import type { Incident, Severity, Status } from '../types';
 import './Dashboard.css';
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
     const navigate = useNavigate();
     const [incidents, setIncidents] = useState<Incident[]>([]);
     const [loading, setLoading] = useState(false);
@@ -219,9 +219,9 @@ const Dashboard: React.FC = () => {
                             </>
                         ) : (
                             <>
-                                <Chip label={`Total: ${stats.total}`} variant="outlined" size="small" />
-                                <Chip label={`Open: ${stats.open}`} color="success" variant="outlined" size="small" />
-                                <Chip label={`Active Sev1: ${stats.activeSev1}`} color="error" variant="outlined" size="small" />
+                                <Chip label={`Total: ${stats.total} `} variant="outlined" size="small" />
+                                <Chip label={`Open: ${stats.open} `} color="success" variant="outlined" size="small" />
+                                <Chip label={`Active Sev1: ${stats.activeSev1} `} color="error" variant="outlined" size="small" />
                             </>
                         )}
                     </div>
@@ -396,7 +396,7 @@ const Dashboard: React.FC = () => {
                                     key={incident.id}
                                     hover
                                     sx={{ '&:last-child td, &:last-child th': { border: 0 }, cursor: 'pointer' }}
-                                    onClick={() => navigate(`/incidents/${incident.id}`)}
+                                    onClick={() => navigate(`/ incidents / ${incident.id} `)}
                                 >
                                     <TableCell component="th" scope="row" sx={{ fontFamily: 'monospace', fontWeight: 500 }}>
                                         {incident.id}
@@ -406,7 +406,7 @@ const Dashboard: React.FC = () => {
                                         <Chip
                                             label={incident.severity}
                                             size="small"
-                                            className={`severity-${incident.severity.toLowerCase()}`}
+                                            className={`severity - ${incident.severity.toLowerCase()} `}
                                             sx={{ fontWeight: 600, minWidth: 60 }}
                                         />
                                     </TableCell>
@@ -414,7 +414,7 @@ const Dashboard: React.FC = () => {
                                         <Chip
                                             label={incident.status}
                                             size="small"
-                                            className={`status-chip-${incident.status.toLowerCase()}`}
+                                            className={`status - chip - ${incident.status.toLowerCase()} `}
                                             sx={{ fontWeight: 600 }}
                                         />
                                     </TableCell>
@@ -428,7 +428,7 @@ const Dashboard: React.FC = () => {
                                     </TableCell>
                                     <TableCell>{new Date(incident.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).replace(/ (\d{4})$/, ', $1')}</TableCell>
                                     <TableCell align="right">
-                                        <IconButton size="small" onClick={(e) => { e.stopPropagation(); navigate(`/incidents/${incident.id}`); }}>
+                                        <IconButton size="small" onClick={(e) => { e.stopPropagation(); navigate(`/ incidents / ${incident.id} `); }}>
                                             <ArrowForwardIcon fontSize="small" />
                                         </IconButton>
                                     </TableCell>
